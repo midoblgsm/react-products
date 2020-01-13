@@ -1,5 +1,5 @@
 import createDataContext from './createDataContext';
-import ConfigApi from 'swagger_config_store';
+import swagger_config_store from 'swagger_config_store';
 
 const configReducer = (state, action) => {
     switch (action.type)
@@ -13,8 +13,11 @@ const configReducer = (state, action) => {
 
 
 const fetchConfig = dispatch => ({ path, version }) => {
+    let client = new swagger_config_store.ConfigApi()
 
-    let result = ConfigApi.getConfigByPath(path, version, null)
+    console.log(client)
+    let result = client.getConfigByPath("hello", "version", null)
+    console.log("fetching")
     dispatch({ type: 'fetch_config', payload: result });
 
 
@@ -31,5 +34,5 @@ export const { Provider, Context } = createDataContext(
     {
         fetchConfig,
     },
-    {}
+    { "happy": "config" }
 );
