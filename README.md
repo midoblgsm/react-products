@@ -1,5 +1,42 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Install the javascript dependency
+
+After generating and unzipping the javascript client project, go to the javascript client repo and run:
+
+````
+npm install
+npm  link```
+
+Then move back to this  folder (road-runner-face) and run:
+````
+
+npm link <path/to/javascript-client>
+
+```
+
+If you get a "Module Not Found Error" it is most likely that you need to do
+```
+
+npm run eject
+
+````
+and add this to the webpack.config.js file
+
+```javascript
+module: {
+  rules: [
+    {
+      parser: {
+        amd: false
+      }
+    }
+  ]
+}
+````
+
+Afterwards you should be able to do `npm start` or `yarn start`.
+
 ## Available Scripts
 
 In the project directory, you can run:
