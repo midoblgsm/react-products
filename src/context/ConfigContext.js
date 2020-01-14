@@ -17,7 +17,7 @@ const fetchConfig = dispatch => ({ path, version }) => {
 
     console.log(client)
     let result = client.getConfigByPath("hello", "version", null)
-    console.log("fetching")
+    result = { "st": "run" }
     dispatch({ type: 'fetch_config', payload: result });
 
 

@@ -9,6 +9,7 @@ function App() {
     <ConfigProvider>
       <div className="App">
         <Config />
+
       </div>
     </ConfigProvider>
   );
