@@ -1,17 +1,16 @@
 import React from 'react';
-import { Provider as ConfigProvider } from './context/ConfigContext';
+import { Provider as ProductsProvider } from './context/ProductsContext';
 
 import './App.css';
-import Config from './containers/Config';
+import Products from './containers/Products';
 
 function App() {
   return (
-    <ConfigProvider>
+    <ProductsProvider>
       <div className="App">
-        <Config />
-
+        <Products />
       </div>
-    </ConfigProvider>
+    </ProductsProvider>
   );
 }
 
