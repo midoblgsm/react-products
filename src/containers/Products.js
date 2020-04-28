@@ -20,7 +20,7 @@ const Config = () => {
         <Product
             key={product.id}
             id={product.id}
-            title={product.title}
+            title={product.name}
             text={product.description}
             stars={product.rating.stars}
             color={product.rating.color}
