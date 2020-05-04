@@ -31,10 +31,16 @@ const Config = () => {
 
 
     return (
+        <div>
+            <CardDeck>
+                {prods}
 
-        <CardDeck>
-            {prods}
-        </CardDeck>
+            </CardDeck>
+            <CardDeck>
+                {prods}
+
+            </CardDeck>
+        </div>
     )
 }
 
