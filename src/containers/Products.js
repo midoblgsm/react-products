@@ -32,9 +32,12 @@ const Config = () => {
 
     return (
 
-        <CardDeck>
-            {prods}
-        </CardDeck>
+        <div>
+            <CardDeck>
+                {prods}
+            </CardDeck>
+
+        </div>
     )
 }
 
